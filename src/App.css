@@ -60,8 +60,8 @@
 
 .big_color_card{
   position: absolute;
-  width: 35%;
-  height: 70%;
+  width: 30rem;
+  height: 30rem;
   padding: 4rem;
   text-transform: capitalize;
   display: flex;
@@ -80,6 +80,7 @@
 }
 .pantone small{
   position: absolute;
+  font-size: 0.9rem;
   top: 0;
   left: 0;
 }
@@ -93,9 +94,9 @@
 @media screen and (min-width: 1300px) {
 
   .big_color_card{
-    width: 35%;
-    height: 70%;
-    font-size: 1.5rem;
+    width: 30rem;
+    height: 30rem;
+    /* font-size: 1.5rem; */
   }
   
 
@@ -104,8 +105,8 @@
 @media screen and (min-width:969px) and (max-width:1299px){
   
   .big_color_card{
-    width: 45%;
-    height: 60%;
+    width: 30rem;
+    height: 30rem;
   }
 
   .all_cards{
@@ -118,8 +119,12 @@
 @media screen and (min-width:770px) and (max-width:970px){
   
   .big_color_card{
-    width: 55%;
-    height: 55%;
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .pantone{
+    width: 80%;
   }
 
   .all_cards{
@@ -132,8 +137,8 @@
 @media screen and (max-width:769px){
   
   .big_color_card{
-    width: 80%;
-    height: 60%;
+    width: 20rem;
+    height: 20rem;
     padding: 4rem;
   }
 
