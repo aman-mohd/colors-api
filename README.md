@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+This code was given by a company as a assessment for React Developer profile.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My version of this problem is hosted here: https://colors-api.netlify.app/resources
 
-## Available Scripts
+The Detail about the test is as follows,
 
-In the project directory, you can run:
+The app fetched API to get data and display color cards.
 
-### `npm start`
+Following were the requirements of a test React App to be built:
+  There will be 2 routes in the react app
+  /resources
+  /resources/{id} where id would be a number
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. /resources route -will call this api- https://reqres.in/api/unknown
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The API returns JSON with a list of data item
 
-### `npm test`
+[
+  {
+    "id": 1,
+    "name": "cerulean",
+    "year": 2000,
+    "color": "#98B2D1",
+    "pantone_value": "15-4020"
+  },
+  {
+    "id": 2,
+    "name": "fuchsia rose",
+    "year": 2001,
+    "color": "#C74375",
+    "pantone_value": "17-2031"
+  }
+]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use this data to display grid of boxes like this,
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![colors](https://user-images.githubusercontent.com/88103324/128742339-d310fd27-d886-46cd-91de-a95b3a0a5a8a.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+On click of any of the box in the grid, the app should redirect to the detailed
+component below. Plus points if you make your grid responsive. Also note the
+color of the box is in the API response.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Detailed Resource route and compoonent: resources/{id}
+API to use - https://reqres.in/api/unknown/2
+Response will be like below
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+{
+  "data": {
+      "id": 2,
+      "name": "fuchsia rose",
+      "year": 2001,
+      "color": "#C74375",
+      "pantone_value": "17-2031"
+      }
+}
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This will simply show a single big box with pantone value like below
 
-## Learn More
+![bigCard](https://user-images.githubusercontent.com/88103324/128742908-4f0160db-dcff-447e-b187-9d4c3080606c.PNG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Plus points, if you have detailed routing as below:
+When the user directly accesses the app using the react app link like
+http://localhost:3000/resources/1, then the app should hit the above detailed API
+and show the only one big Box on the page with Pantone value. However, if the
+user is on the grid page and clicks on a box in the grid, then the browser
+URL(route) should change with the id of the box. And, that box should show on
+the screen with pantone value. Please let us know if any doubts.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
