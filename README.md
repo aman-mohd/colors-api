@@ -1,6 +1,8 @@
-This code was given by a company as a assessment for React Developer profile.
+This code was given by a company as an assessment for React Developer profile.
 
 My version of this problem is hosted here: https://colors-api.netlify.app/resources
+
+
 
 The Detail about the test is as follows,
 
